@@ -7,11 +7,11 @@
   makeDesktopItem,
   unzip,
 }: let
-  version = "2025.1.1";
+  version = "2026.8";
 
-  productName = "pro";
+  productName = "desktop";
   productDesktop = "BurpSuite Professional";
-  burpHash = "sha256-17COQ9deYkzmaXBbg1arD3BQY7l3WZ9FakLXzTxgmr8=";
+  burpHash = "sha256-iI8FiM+Co7cNUI3L8HWRGEomJJ44zajqi1po9LWjB4k=";
 
   burpSrc = fetchurl {
     name = "burpsuite.jar";
@@ -78,7 +78,7 @@ in
       mkdir -p $out/share/pixmaps
       mkdir -p $out/share
 
-      ${lib.getBin unzip}/bin/unzip -p ${burpSrc} resources/Media/icon64${productName}.png > $out/share/pixmaps/burpsuitepro.png
+      ${lib.getBin unzip}/bin/unzip -p ${burpSrc} resources/Media/icon64pro.png > $out/share/pixmaps/burpsuitepro.png
 
       cp ${burpSrc} $out/share/burpsuite_pro_v${version}.jar
       cp ${loaderSrc}/loader.jar $out/share/loader.jar

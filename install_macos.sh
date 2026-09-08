@@ -1,10 +1,10 @@
-git clone https://github.com/xiv3r/Burpsuite-Professional.git 
+git clone https://github.com/c0pt4n/Burpsuite-Professional.git
 cd Burpsuite-Professional
 
 
 # Download Burpsuite Professional
 echo "Downloading Burp Suite Professional Latest..."
-version=2025
+version=2026
 url="https://portswigger.net/burp/releases/download?product=pro&type=Jar"
 curl -L "$url" -o "burpsuite_pro_v$version.jar"
 

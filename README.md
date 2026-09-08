@@ -11,13 +11,13 @@
 
 [Overview](https://portswigger.net/burp/pro)
 </h3>
- 
+
 <br>
 <br>
 
 #  $${\color{magenta}Linux-Installation}$$
 ```sh
-sudo apt update && sudo apt install -y wget && wget -qO- https://raw.githubusercontent.com/xiv3r/Burpsuite-Professional/main/install.sh | sudo bash
+sudo apt update && sudo apt install -y wget && wget -qO- https://raw.githubusercontent.com/c0pt4n/Burpsuite-Professional/main/install.sh | sudo bash
 ```
 ## Run
 ```sh
@@ -28,23 +28,23 @@ burpsuitepro
 ## Update
 > optional
 ```
-cd && sudo rm -rf Burpsuite-Professional && wget -qO- https://raw.githubusercontent.com/xiv3r/Burpsuite-Professional/refs/heads/main/update.sh | sudo bash
+cd && sudo rm -rf Burpsuite-Professional && wget -qO- https://raw.githubusercontent.com/c0pt4n/Burpsuite-Professional/refs/heads/main/update.sh | sudo bash
 ```
- 
+
 ## Java Version
 > select the default openjdk runtime
 ```
 sudo update-alternatives --config java
-```               
+```
 </details>
 
 ## Setup Licenses
 
 <div align="center">
- 
-https://github.com/xiv3r/Burpsuite-Professional/assets/117867334/c25831a4-68a2-44ee-b6dd-5ff18165f340
+
+https://github.com/c0pt4n/Burpsuite-Professional/assets/117867334/c25831a4-68a2-44ee-b6dd-5ff18165f340
 </div>
- 
+
 Note: Copy the license from loader to the burpsuite > manual activation > copy burpsuite request key to loader request >  copy response key to the burpsuite.
 
 <br>
@@ -53,7 +53,7 @@ Note: Copy the license from loader to the burpsuite > manual activation > copy b
 right click the desktop -> create a launcher name it Burpsuite Professional, add command `burpsuitepro` and select burpsuite community icon.
 
 <div align="center">
- <img width="500" height="500" src="https://github.com/xiv3r/Burpsuite-Professional/blob/main/Launcher.jpg">
+ <img width="500" height="500" src="https://github.com/c0pt4n/Burpsuite-Professional/blob/main/Launcher.jpg">
 </div>
 
 <br>
@@ -71,7 +71,7 @@ right click the desktop -> create a launcher name it Burpsuite Professional, add
   inputs = {
     burpsuitepro = {
       type = "github";
-      owner = "xiv3r";
+      owner = "c0pt4n";
       repo = "Burpsuite-Professional";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -109,10 +109,10 @@ NOTE: `loader.jar` is symlinked to `burpsuite.jar` so burpsuite recognizes the l
 ----------
 
 # $${\color{magenta}Windows-Installation}$$
- 
+
 - Make a `Burp` directory name in `C Drive` for faster access.
 
-- Download [install.ps1](https://codeload.github.com/xiv3r/Burpsuite-Professional/zip/refs/heads/main) and extract move the file inside to `C:\Burp`
+- Download [install.ps1](https://codeload.github.com/c0pt4n/Burpsuite-Professional/zip/refs/heads/main) and extract move the file inside to `C:\Burp`
 
 - Open `Powershell` as administrator and execute below command to set Script Execution Policy.
 
@@ -124,19 +124,19 @@ NOTE: `loader.jar` is symlinked to `burpsuite.jar` so burpsuite recognizes the l
 - Now Execute `install.ps1` file in Powershell to Complete Installation.
 
       ./install.ps1
- 
-- Change the icon of `Burp-Suite-Pro.vbs` to the given icon 
+
+- Change the icon of `Burp-Suite-Pro.vbs` to the given icon
 
 - Create a shortcut to Desktop. Right Click over `Burp-Suite-Pro.vbs` Go to Shortcut tab, and below there is `Change Icon` tab
 
 - Click there and choose the `burp-suite.ico` from `C:\Burp\`
 
    <div align="center">
-    
+
     <img src="https://user-images.githubusercontent.com/29830064/230825172-16c9cfba-4bca-46a4-86df-b352a4330b12.png">
 </div>
 
-- For Start Menu Entry, copy `Burp-Suite-Pro.vbs` file to 
+- For Start Menu Entry, copy `Burp-Suite-Pro.vbs` file to
 
       C:\ProgramData\Microsoft\Windows\Start Menu\Programs\
 
@@ -145,7 +145,7 @@ NOTE: `loader.jar` is symlinked to `burpsuite.jar` so burpsuite recognizes the l
 
 ------------
 
-# $${\color{magenta}MacOS-Installation}$$ 
+# $${\color{magenta}MacOS-Installation}$$
 
 ## Step 1: Install Dependencies with Homebrew
 Install Homebrew and required dependencies (`git`, `openjdk@17`).
@@ -159,7 +159,7 @@ brew install git openjdk@17
 Clone the Burp Suite Professional repository, download the Burp Suite JAR file, and execute the key generator and Burp Suite.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/xiv3r/Burpsuite-Professional/main/install_macos.sh | bash
+curl -fsSL https://raw.githubusercontent.com/c0pt4n/Burpsuite-Professional/main/install_macos.sh | bash
 ```
 
 ## Step 3: Install the `burp` Shortcut
@@ -177,12 +177,12 @@ sudo cp burp /usr/local/bin/burp
 
 
 ## Notes
-- **Running the Shortcut**: Run `burp` from the `Burpsuite-Professional` directory containing `loader.jar` and `burpsuite_pro_v2025.5.6.jar`. For global use, replace `$(pwd)` with absolute paths.
+- **Running the Shortcut**: Run `burp` from the `Burpsuite-Professional` directory containing `loader.jar` and `burpsuite_pro_v2025.7.3.jar`. For global use, replace `$(pwd)` with absolute paths.
 
-## Contributors 
+## Contributors
 
-<a href="https://github.com/xiv3r/Burpsuite-Professional/graphs/contributors">
-  <img src="https://contrib.rocks/image?&columns=25&max=10000&&repo=xiv3r/Burpsuite-Professional" alt="contributors"/>
+<a href="https://github.com/c0pt4n/Burpsuite-Professional/graphs/contributors">
+  <img src="https://contrib.rocks/image?&columns=25&max=10000&&repo=c0pt4n/Burpsuite-Professional" alt="contributors"/>
 </a>
 
 ## Credits

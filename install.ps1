@@ -6,7 +6,7 @@ $ProgressPreference = 'SilentlyContinue'
 $jdk21 = Get-WmiObject -Class Win32_Product -filter "Vendor='Oracle Corporation'" |where Caption -clike "Java(TM) SE Development Kit 21*"
 if (!($jdk21)){
     echo "`t`tDownloading Java JDK-21 ...."
-    wget "https://download.oracle.com/java/21/archive/jdk-21_windows-x64_bin.exe" -O jdk-21.exe  
+    wget "https://download.oracle.com/java/21/archive/jdk-21_windows-x64_bin.exe" -O jdk-21.exe
     echo "`n`t`tJDK-21 Downloaded, lets start the Installation process"
     start -wait jdk-21.exe
     rm jdk-21.exe
@@ -30,7 +30,7 @@ if (!($jre8)){
 
 # Download Burpsuite Professional
 Write-Host "Downloading Burp Suite Professional Latest..."
-$version = "2025"
+$version = "2026"
 # Invoke-WebRequest -Uri "https://portswigger.net/burp/releases/download?product=pro&version=$version&type=Jar" `
 #   -OutFile "burpsuite_pro_v$version.jar"
 Invoke-WebRequest -Uri "https://portswigger.net/burp/releases/download?product=pro&type=Jar" `
@@ -54,7 +54,7 @@ echo "`nBurp-Suite-Pro.vbs file is created."
 # Download loader if it not exists
 if (!(Test-Path loader.jar)){
     echo "`nDownloading Loader ...."
-    Invoke-WebRequest -Uri "https://github.com/xiv3r/Burpsuite-Professional/raw/refs/heads/main/loader.jar" -OutFile loader.jar
+    Invoke-WebRequest -Uri "https://github.com/c0pt4n/Burpsuite-Professional/raw/refs/heads/main/loader.jar" -OutFile loader.jar
     echo "`nLoader is Downloaded"
 }else{
     echo "`nLoader is already Downloaded"
@@ -62,7 +62,7 @@ if (!(Test-Path loader.jar)){
 
 # Lets Activate Burp Suite Professional with keygenerator and Keyloader
 echo "Reloading Environment Variables ...."
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 echo "`n`nStarting Keygenerator ...."
 start-process java.exe -argumentlist "-jar loader.jar"
 echo "`n`nStarting Burp Suite Professional"
